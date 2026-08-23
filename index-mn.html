@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Тавлаг Баянгол — Flourishing Bayangol (Монгол хувилбар)</title>
+<style>
+  :root{
+    --forest:#1F4C3B;
+    --teal:#1C504F;
+    --teal2:#296B68;
+    --sage:#AFC8BC;
+    --dark1:#174543;
+    --dark2:#123A39;
+    --dark3:#12363A;
+    --mint:#6FCF97;
+    --offwhite:#EDEDED;
+    --palesage:#C7D6CD;
+    --amber:#E8A33D;
+    --ink:#152420;
+    --card:#ffffff;
+    --border:#dfe7e2;
+    --maxw:1120px;
+    font-size:16px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:Calibri,"Segoe UI",Candara,Optima,Arial,sans-serif;
+    color:var(--ink);
+    background:#fbfbf9;
+    line-height:1.55;
+  }
+  h1,h2,h3,h4{
+    font-family:Cambria,Georgia,"Times New Roman",serif;
+    color:var(--forest);
+    margin:0 0 .4em 0;
+    line-height:1.15;
+  }
+  p{margin:0 0 1em 0;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 1.5rem;}
+
+  /* ---- top nav ---- */
+  header.topnav{
+    position:sticky;top:0;z-index:200;
+    background:var(--dark2);
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .topnav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 1.5rem;
+    display:flex;align-items:center;gap:1.2rem;
+    height:56px;
+  }
+  .brand{
+    color:#fff;font-family:Cambria,Georgia,serif;font-weight:700;
+    font-size:1.02rem;letter-spacing:.02em;white-space:nowrap;flex:none;
+  }
+  .brand small{display:block;font-family:Calibri,sans-serif;font-weight:400;font-size:.68rem;color:var(--sage);letter-spacing:.12em;}
+  nav.links{display:flex;gap:1.1rem;flex-wrap:nowrap;overflow-x:auto;flex:1 1 auto;min-width:0;}
+  nav.links a{
+    color:var(--palesage);text-decoration:none;font-size:.82rem;font-weight:600;
+    letter-spacing:.02em;white-space:nowrap;padding:.4rem 0;border-bottom:2px solid transparent;
+    transition:color .2s,border-color .2s;
+  }
+  nav.links a:hover{color:#fff;border-color:var(--amber);}
+  .lang-toggle{
+    color:#fff;text-decoration:none;font-size:.72rem;font-weight:700;
+    border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:.3rem .75rem;
+    flex:none;white-space:nowrap;transition:background .2s;
+  }
+  .lang-toggle:hover{background:rgba(255,255,255,.14);}
+  @media (max-width:640px){
+    .topnav-inner{height:auto;padding:.6rem 1rem;gap:.4rem .7rem;flex-wrap:wrap;}
+    .brand{order:1;flex:1 1 auto;font-size:.9rem;}
+    .lang-toggle{order:2;}
+    nav.links{order:3;flex:0 0 100%;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:.15rem;gap:1rem;}
+  }
+
+  /* ---- hero ---- */
+  .hero{
+    background:url('assets/hero-gazelle.jpg') center 40% / cover no-repeat;
+    color:#fff;
+    position:relative;
+  }
+  .hero-inner{
+    max-width:1200px;margin:0 auto;padding:2.6rem 2rem;
+    min-height:520px;
+    display:flex;justify-content:space-between;align-items:stretch;gap:2rem;
+  }
+  .hero-left{
+    display:flex;flex-direction:column;justify-content:space-between;
+    max-width:620px;
+  }
+  .hero-left>*{text-shadow:0 2px 10px rgba(0,0,0,.55),0 1px 3px rgba(0,0,0,.5);}
+  .eyebrow{
+    display:block;font-size:.8rem;letter-spacing:.16em;font-weight:700;
+    color:var(--amber);text-transform:uppercase;
+  }
+  .hero h1{color:#fff;font-size:2.9rem;margin:.5em 0 .15em;letter-spacing:.01em;}
+  .hero .mn-subtitle{
+    font-size:1.1rem;color:#fff;font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;font-family:Calibri,sans-serif;display:block;margin-bottom:1.4rem;
+  }
+  .hero .subtitle{
+    color:#fff;font-size:1.02rem;font-style:italic;margin:0;
+  }
+  .hero-right{
+    display:flex;flex-direction:column;justify-content:space-between;align-items:flex-end;
+    text-align:right;flex:none;
+  }
+  .hero-stats-stack{display:flex;flex-direction:column;gap:.85rem;align-items:flex-end;}
+  .hero-stat-line .num{
+    display:block;font-family:Cambria,Georgia,serif;font-weight:700;font-size:1.5rem;
+    color:var(--amber);text-shadow:0 2px 10px rgba(0,0,0,.6);line-height:1.1;
+  }
+  .hero-stat-line .lbl{font-size:.78rem;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.65);}
+  .hero-logos{display:flex;gap:.7rem;margin-top:1.4rem;}
+  .hero-logos img{height:38px;width:auto;background:#fff;border-radius:6px;padding:4px 7px;}
+  @media (max-width:780px){
+    .hero-inner{flex-direction:column;min-height:0;padding:2rem 1.25rem 1.6rem;gap:1.8rem;}
+    .hero-left{max-width:100%;}
+    .hero h1{font-size:2.1rem;}
+    .hero-right{align-items:flex-start;text-align:left;}
+    .hero-stats-stack{align-items:flex-start;flex-direction:row;flex-wrap:wrap;}
+    .hero-logos{justify-content:flex-start;}
+  }
+
+  /* ---- sections ---- */
+  section.block{padding:3.6rem 0;border-bottom:1px solid var(--border);scroll-margin-top:88px;}
+  footer{scroll-margin-top:88px;}
+  section.block.alt{background:#f3f6f4;}
+  section.block.dark{background:linear-gradient(160deg,var(--dark1),var(--dark3));color:#fff;}
+  section.block.dark h2,section.block.dark h3{color:#fff;}
+  section.block.dark .eyebrow2{color:var(--amber);}
+  section.block.dark p{color:var(--palesage);}
+  .eyebrow2{
+    font-size:.74rem;letter-spacing:.14em;font-weight:700;color:var(--teal2);
+    text-transform:uppercase;margin-bottom:.5rem;display:flex;align-items:center;gap:.5rem;
+  }
+  .motif-icon{width:26px;height:26px;object-fit:contain;opacity:.85;flex:none;}
+  h2.title{font-size:1.85rem;max-width:760px;}
+  .lede{max-width:760px;color:#3d4d47;font-size:1.03rem;}
+  section.block.dark .lede{color:var(--palesage);}
+  .subsection{margin-top:3rem;}
+  .subsection:first-child{margin-top:0;}
+
+  /* ---- stat cards ---- */
+  .stat-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.6rem;}
+  .stat-card{
+    background:var(--card);border:1px solid var(--border);border-top:4px solid var(--amber);
+    border-radius:10px;padding:1.2rem 1.4rem;flex:1 1 200px;box-shadow:0 2px 8px rgba(20,50,40,.05);
+  }
+  .stat-card .num{font-family:Cambria,Georgia,serif;font-size:1.9rem;font-weight:700;color:var(--forest);}
+  .stat-card .lbl{font-size:.86rem;color:#5b6b64;margin-top:.2rem;}
+  section.block.dark .stat-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);}
+  section.block.dark .stat-card .num{color:var(--amber);}
+  section.block.dark .stat-card .lbl{color:var(--palesage);}
+  section.block.dark .stat-card img.icon{filter:brightness(0) invert(1) opacity(.88);}
+
+  .callout{
+    background:var(--offwhite);border-left:4px solid var(--teal2);border-radius:6px;
+    padding:1rem 1.3rem;margin-top:1.4rem;font-size:.96rem;color:#33433d;
+  }
+  .callout.amber{border-color:var(--amber);background:#fdf3e4;}
+  .highlight-num{color:var(--amber);font-weight:700;}
+  .footnote{font-size:.78rem;color:#7c8f88;margin-top:.5rem;}
+  section.block.dark .footnote{color:#9db3ab;}
+
+  /* ---- grid / cards ---- */
+  .grid{display:grid;gap:1.4rem;margin-top:1.8rem;}
+  .grid.cols-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+  .grid.cols-4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr));}
+  .grid.cols-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+  .grid.cols-5{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));}
+  .grid.cols-8{grid-template-columns:repeat(8,1fr);gap:.7rem;}
+  .grid.cols-8 .pillar-card{padding:.7rem .5rem;}
+  .grid.cols-8 .pillar-card img.icon{width:34px;height:34px;margin:.3rem auto .5rem;}
+  .grid.cols-8 .pillar-card h4{font-size:.74rem;line-height:1.25;}
+  .grid.cols-8 .pillar-card p{font-size:.66rem;line-height:1.3;}
+  .grid.cols-8 .pillar-card .budget{font-size:.86rem;}
+  .grid.cols-8 .pillar-card .fund-tag{font-size:.52rem;padding:.12rem .35rem;}
+  @media (max-width:900px){.grid.cols-8{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:560px){.grid.cols-8{grid-template-columns:repeat(2,1fr);}}
+
+  .icon-card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:1.3rem;box-shadow:0 2px 8px rgba(20,50,40,.05);
+  }
+  .icon-card img.icon{width:44px;height:44px;margin-bottom:.7rem;}
+  .icon-card h4{font-size:1.02rem;margin-bottom:.35rem;}
+  .icon-card p{font-size:.88rem;color:#5b6b64;margin:0;}
+  section.block.dark .icon-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14);}
+  section.block.dark .icon-card p{color:var(--palesage);}
+
+  .pillar-card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:1.1rem;text-align:center;box-shadow:0 2px 8px rgba(20,50,40,.05);
+    position:relative;
+  }
+  .pillar-card .pnum{
+    position:absolute;top:.6rem;left:.6rem;background:var(--forest);color:#fff;font-weight:700;
+    font-size:.72rem;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  }
+  .pillar-card .fund-tag{
+    position:absolute;top:.6rem;right:.6rem;font-size:.6rem;font-weight:700;letter-spacing:.03em;
+    padding:.15rem .45rem;border-radius:10px;text-transform:uppercase;
+  }
+  .fund-tag.grant{background:#e4f3ea;color:var(--forest);}
+  .fund-tag.loan{background:#fdf3e4;color:#9a6a1c;}
+  .pillar-card img.icon{width:48px;height:48px;margin:.4rem auto .6rem;}
+  .pillar-card h4{font-size:.94rem;margin-bottom:.3rem;}
+  .pillar-card .budget{color:var(--amber);font-weight:700;font-family:Cambria,Georgia,serif;font-size:1.05rem;}
+
+  /* ---- offer cards ---- */
+  .offer-card{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:1.4rem;box-shadow:0 2px 8px rgba(20,50,40,.05);border-top:4px solid var(--teal2);
+  }
+  .offer-card h4{font-size:1.05rem;margin-bottom:.6rem;}
+  .offer-card .row{font-size:.88rem;margin-bottom:.5rem;color:#3d4d47;}
+  .offer-card .row b{color:var(--forest);}
+  .offer-card .cost{
+    margin-top:.8rem;font-family:Cambria,Georgia,serif;font-weight:700;color:var(--amber);font-size:1.1rem;
+  }
+  .offer-card .cost span{font-family:Calibri,sans-serif;font-weight:400;color:#5b6b64;font-size:.8rem;}
+
+  /* ---- photos ---- */
+  .photo{
+    border-radius:12px;overflow:hidden;box-shadow:0 4px 16px rgba(20,50,40,.12);
+    border:1px solid var(--border);
+  }
+  .photo img{width:100%;height:100%;object-fit:cover;}
+  .photo-cap{font-size:.82rem;color:#5b6b64;margin-top:.5rem;}
+  section.block.dark .photo-cap{color:var(--palesage);}
+
+  /* ---- gallery ---- */
+  .gallery-group{margin-top:2.2rem;}
+  .gallery-group h4{font-size:1.05rem;margin-bottom:.9rem;color:var(--forest);}
+  section.block.dark .gallery-group h4{color:#fff;}
+  .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+
+  /* ---- step chain ---- */
+  .step-chain{list-style:none;margin:1.8rem 0 0;padding:0;counter-reset:step;}
+  .step-chain li{
+    display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;
+    border-bottom:1px dashed var(--border);
+  }
+  .step-chain li:last-child{border-bottom:none;}
+  .step-chain .step-icon{
+    width:44px;height:44px;border-radius:10px;background:#fff;border:1px solid var(--border);
+    flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden;
+  }
+  .step-chain .step-icon img{width:100%;height:100%;object-fit:contain;padding:4px;}
+  .step-chain .step-num{
+    width:26px;height:26px;border-radius:50%;background:var(--forest);color:#fff;font-weight:700;
+    font-size:.78rem;display:flex;align-items:center;justify-content:center;flex:none;margin-top:2px;
+  }
+  .step-chain b{color:var(--forest);display:block;margin-bottom:.15rem;}
+  .step-chain span{font-size:.88rem;color:#5b6b64;}
+
+  /* ---- tables ---- */
+  .table-wrap{overflow-x:auto;margin-top:1.5rem;border-radius:10px;box-shadow:0 2px 10px rgba(20,50,40,.06);}
+  table{width:100%;border-collapse:collapse;background:#fff;font-size:.86rem;min-width:420px;}
+  table caption{text-align:left;font-weight:700;padding:.4rem .9rem;background:var(--dark1);color:#fff;font-family:Cambria,Georgia,serif;}
+  thead th{
+    background:var(--forest);color:#fff;text-align:left;padding:.42rem .8rem;font-size:.74rem;
+    letter-spacing:.03em;text-transform:uppercase;
+  }
+  tbody td{padding:.36rem .8rem;border-bottom:1px solid var(--border);}
+  tbody tr:nth-child(even){background:#f6f8f6;}
+  tbody tr.total td{background:#fdf3e4;font-weight:700;color:var(--forest);border-top:2px solid var(--amber);}
+  tbody tr.excluded td{color:#8a978f;font-style:italic;}
+
+  /* ---- bar comparison (economics) ---- */
+  .cmp-bars{margin-top:1.8rem;display:flex;flex-direction:column;gap:.9rem;}
+  .cmp-row .cmp-label{font-size:.85rem;font-weight:700;color:var(--forest);margin-bottom:.3rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem;}
+  .cmp-row .cmp-label em{font-style:normal;font-weight:400;color:#8a978f;font-size:.78rem;}
+  .cmp-track{position:relative;background:#eef2ef;border-radius:6px;height:20px;overflow:hidden;}
+  .cmp-fill{position:absolute;top:0;left:0;height:100%;border-radius:6px 0 0 6px;}
+  .cmp-fill.baseline{background:var(--sage);}
+  .cmp-fill.withproj{background:var(--amber);opacity:.9;}
+  .cmp-legend{display:flex;gap:1.2rem;margin-top:.6rem;font-size:.8rem;color:#5b6b64;}
+  .cmp-legend span{display:inline-flex;align-items:center;gap:.4rem;}
+  .cmp-legend i{width:12px;height:12px;border-radius:3px;display:inline-block;}
+
+  /* ---- roadmap ---- */
+  .roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem;margin-top:1.8rem;}
+  .roadmap-card{
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:1.4rem;
+  }
+  .roadmap-card .yr{font-size:.76rem;letter-spacing:.1em;color:var(--amber);font-weight:700;text-transform:uppercase;}
+  .roadmap-card h4{color:#fff;font-size:1.15rem;margin:.3rem 0 .5rem;}
+  .roadmap-card p{color:var(--palesage);font-size:.88rem;margin:0 0 .5rem;}
+
+  /* ---- flow diagram ---- */
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin-top:1.8rem;justify-content:center;}
+  .flow-step{
+    background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem 1.2rem;
+    text-align:center;min-width:150px;flex:1 1 150px;box-shadow:0 2px 8px rgba(20,50,40,.05);
+  }
+  .flow-step img.icon{width:36px;height:36px;margin:0 auto .5rem;}
+  .flow-step h4{font-size:.9rem;margin-bottom:.2rem;}
+  .flow-step p{font-size:.78rem;color:#5b6b64;margin:0;}
+  .flow-arrow{font-size:1.4rem;color:var(--amber);font-weight:700;}
+  .flow.value-chain{align-items:stretch;}
+  .flow.value-chain .flow-step{
+    background:#e9f2ec;border-color:#cfe2d7;display:flex;flex-direction:column;
+    justify-content:center;min-height:118px;
+  }
+  .grid.compact-3{grid-template-columns:repeat(3,1fr);}
+  .grid.compact-3 .stat-card{padding:.85rem 1.1rem;}
+  .grid.compact-3 .stat-card img.icon{width:26px;height:26px;margin-bottom:.35rem;}
+  .grid.compact-3 .stat-card .num{font-size:1.5rem;}
+  @media (max-width:700px){.grid.compact-3{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:460px){.grid.compact-3{grid-template-columns:repeat(1,1fr);}}
+
+  /* ---- donut chart ---- */
+  .donut-wrap{display:flex;flex-wrap:wrap;gap:2.4rem;align-items:center;margin-top:1.8rem;}
+  .donut{
+    width:200px;height:200px;border-radius:50%;flex:none;
+    background:conic-gradient(var(--amber) 0% 73%, var(--teal2) 73% 100%);
+    display:flex;align-items:center;justify-content:center;position:relative;
+  }
+  .donut::before{
+    content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:var(--card);
+  }
+  section.block.dark .donut::before{background:var(--dark1);}
+  .donut-center{position:relative;text-align:center;}
+  .donut-center .num{font-family:Cambria,Georgia,serif;font-weight:700;font-size:1.3rem;color:var(--forest);}
+  section.block.dark .donut-center .num{color:#fff;}
+  .donut-center .lbl{font-size:.7rem;color:#7c8f88;}
+  .donut-legend{display:flex;flex-direction:column;gap:.6rem;font-size:.92rem;}
+  .donut-legend span{display:flex;align-items:center;gap:.5rem;}
+  .donut-legend i{width:14px;height:14px;border-radius:4px;flex:none;}
+  .donut-legend i.loan{background:var(--amber);}
+  .donut-legend i.grant{background:var(--teal2);}
+
+  .bar-breakdown{margin-top:1rem;display:flex;flex-direction:column;gap:.6rem;}
+  .bar-breakdown .brow{display:flex;align-items:center;gap:.8rem;font-size:.86rem;}
+  .bar-breakdown .blabel{flex:0 0 170px;color:#3d4d47;}
+  section.block.dark .bar-breakdown .blabel{color:var(--palesage);}
+  .bar-breakdown .btrack{flex:1;background:rgba(0,0,0,.06);border-radius:5px;height:14px;position:relative;overflow:hidden;}
+  section.block.dark .bar-breakdown .btrack{background:rgba(255,255,255,.1);}
+  .bar-breakdown .bfill{height:100%;border-radius:5px;}
+  .bar-breakdown .bfill.loan{background:var(--amber);}
+  .bar-breakdown .bfill.grant{background:var(--teal2);}
+  .bar-breakdown .bval{flex:0 0 80px;text-align:right;font-weight:700;color:var(--forest);font-size:.84rem;}
+  section.block.dark .bar-breakdown .bval{color:#fff;}
+
+  /* ---- footer ---- */
+  footer{
+    background:var(--dark3);color:var(--palesage);text-align:center;padding:3rem 1.5rem;
+  }
+  footer h2{color:#fff;display:flex;align-items:center;justify-content:center;gap:.6rem;}
+  footer .contact{margin-top:1rem;font-size:.95rem;}
+  footer .logos{display:flex;justify-content:center;align-items:center;gap:1.5rem;margin-top:1.6rem;flex-wrap:wrap;}
+  footer .logos img{height:40px;background:#fff;border-radius:6px;padding:4px 8px;}
+  footer .contact-photo{width:64px;height:64px;border-radius:50%;object-fit:cover;}
+  footer .fine{margin-top:2rem;font-size:.76rem;color:#6f8a83;}
+
+  @media (max-width:640px){
+    .hero h1{font-size:1.9rem;}
+    h2.title{font-size:1.5rem;}
+    .donut-wrap{justify-content:center;}
+    .bar-breakdown .blabel{flex-basis:120px;font-size:.78rem;}
+    .flow{flex-direction:column;align-items:stretch;}
+    .flow-step{width:100%;min-width:0;flex:1 1 auto;}
+    .flow-arrow{transform:rotate(90deg);align-self:center;}
+    .flow.value-chain .flow-step{min-height:0;}
+  }
+</style>
+</head>
+<body>
+
+<header class="topnav">
+  <div class="topnav-inner">
+    <div class="brand">Тавлаг Баянгол<small>ТАВЛАГ БАЯНГОЛ · КОП-17</small></div>
+    <nav class="links">
+      <a href="#context">Нөхцөл байдал</a>
+      <a href="#policy">Бодлого</a>
+      <a href="#proposal">Санал</a>
+      <a href="#model">Загвар</a>
+      <a href="#impact">Үр нөлөө</a>
+      <a href="#investment">Хөрөнгө оруулалт</a>
+      <a href="#contact">Холбоо барих</a>
+    </nav>
+    <a class="lang-toggle" href="index.html">EN</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div>
+        <span class="eyebrow">КОП-17 · Улаанбаатар · 2026 оны 8-р сар</span>
+        <h1>ТАВЛАГ БАЯНГОЛ</h1>
+        <span class="mn-subtitle">Flourishing Bayangol</span>
+      </div>
+      <p class="subtitle">Малчдын өмчлөлтэй бэлчээр ба амьжиргааг дэмжих хөтөлбөр — Монгол улс, Сүхбаатар аймаг</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-stats-stack">
+        <div class="hero-stat-line"><span class="num">224,000</span><span class="lbl">га бэлчээрийн талбай</span></div>
+        <div class="hero-stat-line"><span class="num">273</span><span class="lbl">Баянгол багийн өрх</span></div>
+        <div class="hero-stat-line"><span class="num">169,186</span><span class="lbl">ХТМ мал</span></div>
+        <div class="hero-stat-line"><span class="num">40</span><span class="lbl">Хоршооны гишүүн</span></div>
+        <div class="hero-stat-line"><span class="num">$1.29 сая</span><span class="lbl">Хүсэж буй хөрөнгө оруулалт</span></div>
+      </div>
+      <div class="hero-logos">
+        <img src="assets/image6.png" alt="Хоршооны лого">
+        <img src="assets/image5.png" alt="Дарьганга Фүүд компанийн лого">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="context">
+  <div class="container">
+    <div class="subsection">
+      <span class="eyebrow2"><img class="motif-icon" src="assets/image7.png" alt="">Мэндчилгээ</span>
+      <div class="callout amber" style="display:flex;gap:1rem;align-items:flex-start;">
+        <img src="assets/image8.svg" alt="" style="width:34px;height:34px;flex:none;">
+        <div>
+          <h3 style="margin-bottom:.2rem;">"Тавлаг уу?" — малчдын өдөр тутмын мэндчилгээ, бүх юм сайн уу гэсэн үг</h3>
+          <p style="margin:0;color:#3d4d47;">Цөөн тооны, сайн үүлдэржүүлсэн, сайн арчилсан, хог хаягдалгүй боловсруулсан мал нь аль хэдийн даацаа алдсан газар дээр өсгөж болох дурын олон малаас хавьгүй их үнэ цэнийг бий болгоно.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2"><img class="motif-icon" src="assets/image9.png" alt="">Нөхцөл байдал</span>
+      <h2 class="title">Яагаад энэ бүс нутаг, яагаад одоо</h2>
+      <p class="lede">Монгол улсын бэлчээрийн мал аж ахуй бол хөдөөгийн эдийн засгийн тулгуур бөгөөд хамгийн эмзэг салбаруудын нэг юм. Мөн энэ нь монгол хүний оршин тогтнолын гол цөм — малчин, мал, бэлчээрийн салшгүй холбоо дээр тогтсон нүүдэлчин соёл иргэншил. Байгаль орчин, хөдөө аж ахуй, дипломат харилцааны олон арван жилийн хүчин чармайлт тогтвортой салбар бий болгох суурийг тавьсан. Үүнийг өнөөдөр хэрэгжүүлэхийн тулд бүх түвшинд оролцоо шаардлагатай.</p>
+      <div class="stat-row">
+        <div class="stat-card"><div class="num">12.8%</div><div class="lbl">Монголын ДНБ-д эзлэх хувь</div></div>
+        <div class="stat-card"><div class="num">30%</div><div class="lbl">улсын нийт хөдөлмөр эрхлэлтэд эзлэх хувь</div></div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Гол асуудал</span>
+      <h2 class="title">1-р баг Баянгол газрын даацаас хэтэрсэн ачааллыг үүрч байна</h2>
+      <div class="stat-row">
+        <div class="stat-card" style="flex:1 1 260px;border-top-color:var(--forest);">
+          <div class="num" style="font-size:2.4rem;">169,186</div>
+          <div class="lbl">хонин толгой мал (ХТМ), харин бэлчээрийн даац хавьгүй бага</div>
+        </div>
+        <div class="stat-card" style="flex:1 1 200px;">
+          <div class="num">763 тонн</div>
+          <div class="lbl">органик хог хаягдал жилд (сумын хэмжээнд)</div>
+        </div>
+      </div>
+      <p class="callout">Энэ нь шинжлэх ухааны үндэслэлтэй тооцоолсон тогтвортой даацаас (0.427 ХТМ/га, улсын тэжээлийн балансын арга) <span class="highlight-num">77%</span>-иар илүү үзүүлэлт юм. 2023 оны зудад малынхаа тэн хагасаас илүүг алдсаны дараа малчид үндсэн орлогынхоо стратеги болгон сүргээ дахин нөхөн бий болгож байгаа нь газарт үзүүлэх дарамтыг улам гүнзгийрүүлж байна.</p>
+      <p class="callout amber">3 дахь жилийн зорилт: <span class="highlight-num">135,000 ХТМ</span> → даацаас хэтэрсэн хувийг 77%-иас ~41% болгож бууруулна · 2035 он гэхэд улсын хүлэмжийн хийн зорилтод 0.2%-иар хувь нэмэр оруулна.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="policy">
+  <div class="container">
+    <span class="eyebrow2">Бэлчээр ашиглалт, хяналт-шинжилгээний бодлого ба технологи</span>
+    <h2 class="title">Улсын бодлого дээр суурилж, малчны түвшинд хүргэгдэнэ</h2>
+    <div class="grid cols-2">
+      <div class="icon-card"><p style="margin:0;">Монгол Улсын Засгийн газар олон улсын төсөл, хөтөлбөрүүдтэй (GEF, UN FAO, UNDP, WWF, GCF, TNC, Switch-Asia гэх мэт) хамтран бэлчээр хамгааллын чиглэлээр төрийн бодлогын санаачилгуудыг тогтолцоотойгоор хэрэгжүүлж ирсэн. Үүнд тусгай хамгаалалттай бэлчээрийн даацыг тооцох аргачлал боловсруулах, тусгай хамгаалалттай газар нутгийг өргөтгөх, бэлчээрийн фото мониторинг хийх зэрэг орно. Үүний үр дүнд бэлчээр хамгааллын тохиромжтой аргачлал, технологи, засаглалын тогтолцоог амжилттай нэвтрүүлсэн байна.</p></div>
+      <div class="icon-card"><p style="margin:0;">Цаашид эдгээр тогтоогдсон загвар, аргачлал, технологийг ашиглан бэлчээрийн тогтвортой байдлыг хадгалах үүрэг хариуцлага нь малчин, малчдын байгууллага, багийн түвшингээс эхлэх ёстой. Тавлаг Баянгол төслийн зорилго нь малчдад аль хэдийн туршигдсан шилдэг туршлагыг — газрын харилцааны байгууллагатай хамтран бэлчээр ашиглалтын төлөвлөгөө, ээлжлэн амраах системийг — таниулж сургахад оршино. Ингэснээр нүүдэлчин өв соёл, биологийн олон янз байдлыг хадгалсаар малын үнэ цэнийг нэмэгдүүлнэ.</p></div>
+    </div>
+    <div class="photo" style="max-width:640px;margin-top:1.6rem;"><img src="assets/image10.png" alt="Бэлчээрийн бодлогын хүрээний схем"></div>
+
+    <div class="subsection">
+      <h3 style="font-size:1.25rem;">Сумын бэлчээрийн тогтвортой менежмент</h3>
+      <p class="lede" style="max-width:900px;">Улсын бодлогыг газар дээрх бэлчээрийн дүрэм болгон хувиргадаг засаглалын гинжин хэлхээ бөгөөд эцэст нь малчид өөрсдөө оролцсон фото мониторингоор төгсдөг.</p>
+      <div class="grid cols-2" style="align-items:start;">
+        <div class="photo"><img src="assets/image11.png" alt="Засаглалын урсгал схем"><div class="photo-cap" style="padding:.5rem .8rem 0;">Үйл явцын тойм</div></div>
+        <ul class="step-chain">
+          <li><span class="step-num">1</span><span class="step-icon"><img src="assets/image12.jpeg" alt=""></span><div><b>Багийн иргэдийн Нийтийн Хурал</b><span>Сумын газар зохион байгуулалтын төлөвлөгөө, тусгай хамгаалалттай дэглэм, коридор ба чухал орчинтой уялдана</span></div></li>
+          <li><span class="step-num">2</span><span class="step-icon"><img src="assets/image13.jpeg" alt=""></span><div><b>Олон салбарын хамтарсан ажлын хэсэг</b><span>Жил бүрийн газар зохион байгуулалтын төлөвлөгөө</span></div></li>
+          <li><span class="step-num">3</span><span class="step-icon"><img src="assets/image14.png" alt=""></span><div><b>Сумын Иргэдийн Төлөөлөгчдийн Хурлын батламж</b><span>Жил бүрийн газар зохион байгуулалтын төлөвлөгөө, төсөв (www.egazar.gov.mn)</span></div></li>
+          <li><span class="step-num">4</span><span class="step-icon"><img src="assets/image15.png" alt=""></span><div><b>Сумын Засаг даргын захирамж</b><span>Хэрэгжилт: бэлчээрийн дүрэм, багийн засаг дарга нар, малчид, бэлчээр ажилтан, газрын алба, бэлчээр мэргэжилтэн</span></div></li>
+          <li><span class="step-num">5</span><span class="step-icon"><img src="assets/image16.png" alt=""></span><div><b>Оролцооны фото мониторинг</b><span>www.egazar.gov.mn, «Бэлчээр» гар утасны апп</span></div></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3 style="font-size:1.25rem;display:flex;align-items:center;gap:.5rem;"><img class="motif-icon" src="assets/image19.png" alt="">Өнөөгийн бэлчээрийн төлөв байдал</h3>
+      <div class="grid cols-2" style="align-items:start;">
+        <div class="photo"><img src="assets/image17.jpg" alt="Сүхбаатар сумын бэлчээр"></div>
+        <div>
+          <p class="lede">Бэлчээрийн фото мониторингийн өгөгдлөөр Сүхбаатар аймгийн "Сүхбаатар" сумын бэлчээрийн төлөв байдал "ДУНДАЖ" төлөвтэй байна.</p>
+          <div class="photo"><img src="assets/image18.png" alt="e-gazar.gov.mn бэлчээрийн мониторингийн график"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <h3 style="font-size:1.25rem;">Зөрүү хаана байна</h3>
+      <div class="photo" style="max-width:820px;"><img src="assets/image53.png" alt="Бэлчээрийн мониторингийн зөрүүний зураг"></div>
+      <div class="photo" style="max-width:820px;margin-top:1rem;"><img src="assets/image54.png" alt="Бэлчээрийн доройтлын ангиллын задаргаа"></div>
+      <p class="callout amber" style="margin-top:1.2rem;">Саарал өнгөөр тэмдэглэгдсэн ихэнх талбай нь бодлого ба хэрэгжилтийн хоорондох зөрүүг илтгэнэ — учир нь ихэнх хяналтын цэгүүдэд фото мониторингийн өгөгдлийг уншаагүй байна. Үүнийг орон нутгийн байгууллагатай хамтран, дараагийн 12 цэгт малчдын оролцоог «Бэлчээр» аппаар нэмэгдүүлэх замаар засаж болно. V ангиллын бэлчээр (маш хүчтэй доройтолтой)-ийн хэмжээ <span class="highlight-num">15%-иар нэмэгдсэн</span> нь яаралтай арга хэмжээ авахыг шаардаж байна.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="proposal">
+  <div class="container">
+    <span class="eyebrow2">Төслийн санал</span>
+    <h2 class="title">Төслийн санал: Нэгдсэн, малчдын өмчлөлтэй нэг систем</h2>
+    <p class="lede">Найман тулгуур багана, нэг систем · нийт $1.30 сая — $345 мянган буцалтгүй тусламж + $951 мянган ногоон зээл · 1-р баг Баянголын 273 малчин өрхөд, тэдгээрээр хэрэгжинэ.</p>
+    <div class="grid cols-3">
+      <div class="offer-card">
+        <h4>1 — Газрыг хамгаал · 224,000 га</h4>
+        <div class="row">«Бэлчээр» фото мониторингтой багийн бэлчээрийн төлөвлөгөө</div>
+        <div class="row">Хамгийн эрсдэлтэй 2 усны эх үүсвэрийг хамгаалах</div>
+        <div class="cost">$100 мянга <span>буцалтгүй тусламж</span></div>
+      </div>
+      <div class="offer-card">
+        <h4>2 — Сүргийг сайжруул</h4>
+        <div class="row">Харьцаанд суурилсан үрждэг хуц, ухна</div>
+        <div class="row">Мал эмнэлэг, ГАП хөтөлбөр, органик эрдэс тэжээл</div>
+        <div class="cost">$195 мянга <span>буцалтгүй тусламж</span></div>
+      </div>
+      <div class="offer-card">
+        <h4>3 — Үнэ цэнийг бүрдүүл</h4>
+        <div class="row">650 м² хог хаягдалгүй боловсруулах үйлдвэр</div>
+        <div class="row">Шимт Сүрэг гарал үүсэл мөшгих систем ба эмэгтэйчүүдийн орлогын чиглэл</div>
+        <div class="cost">$1.00 сая <span>ногоон зээл + буцалтгүй тусламж</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="model">
+  <div class="container">
+    <span class="eyebrow2">Яагаад малчдын өмчлөлтэй загвар вэ</span>
+    <h2 class="title">Эрсдэлийг үүрэгч нь хариуцлагыг үүрнэ</h2>
+    <p class="lede">Малчдын амьдрал бэлчээртэй холбоотой — газраа хэрхэн менежмент хийхэд хамгийн эхний хариуцлагыг үүрч байгаагаа мэддэг. Зудны хүнд жилийг хамгийн түрүүнд мэдэрдэг, газар доройтоход орлогоо хамгийн түрүүнд алддаг нь малчид юм. Яг энэ шууд өртөмтгий байдал нь малчдыг тэргүүлж, гадны оператор нь үйл ажиллагааг удирдахаас илүү дэмжлэг үзүүлэгч байхын үндэслэл юм.</p>
+    <div class="grid cols-3">
+      <div class="icon-card">
+        <img class="icon" src="assets/image20.png" alt="Бэлчээр дээр амьдардаг тэмдэгт">
+        <h4>Бэлчээр дээр амьдардаг</h4>
+        <p>Ган, зуд, доройтолд хамгийн их өртдөг — хийсвэр биш, өдөр тутмын эрсдэл.</p>
+      </div>
+      <div class="icon-card">
+        <img class="icon" src="assets/image21.png" alt="Хамгийн их эрсдэл тэмдэгт">
+        <h4>Хамгийн их эрсдэл, хамгийн их хариуцлага</h4>
+        <p>Хөрөнгө оруулагч, операторын үйл ажиллагааг дэмжих нь чухал ч, өдөр тутмын эрсдэлийг малчид үүрдэг.</p>
+      </div>
+      <div class="icon-card">
+        <img class="icon" src="assets/image22.png" alt="Өөрсдөө зохион байгуулсан тэмдэгт">
+        <h4>Өөрсдөө зохион байгуулж, хөрөнгө оруулсан</h4>
+        <p>34 өрх шууд өмчлөлийг сонгосон — цаасан дээрх гишүүнчлэл биш, бодит хөрөнгө оруулалт.</p>
+      </div>
+    </div>
+    <p class="callout">Иймээс малчид өөрсдөө энэ хоршоог санаачилсан юм. GEF-7-с санхүүжсэн «Дорнод-Хээр» төслөөр дамжуулан UN FAO, WWF байгууллагуудын дэмжлэг газар дээр үнэ цэнэтэй хувь нэмэр оруулж байна.</p>
+
+    <div class="subsection">
+      <span class="eyebrow2">Дэлхийн болон орон нутгийн баталгаажуулалт</span>
+      <h2 class="title">Энэ загвар нь дэлхийн болон орон нутгийн малчны түвшинд дэмжигдэж байна</h2>
+      <p class="lede">«Тэнүүн Дархан хаан» хоршоонд GEF-7, UN FAO, WWF байгууллагуудын оролцоо нь малчдын өмчлөлтэй загвар, түүний алсын хараа, зорилтууд олон улсын анхаарлыг татахуйц болохыг батлан харуулж байна.</p>
+      <div class="grid cols-3">
+        <div class="icon-card"><img class="icon" src="assets/image23.png" alt="UN FAO лого"><h4>UN FAO</h4><p>Шинжлэх ухааны үндэслэлийг баталгаажуулна — бэлчээрийн арга, мониторинг, нэмүү өртөг шингэсэн хүнсний үйлдвэрлэл нь FAO-ийн стандартад нийцнэ.</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image24.png" alt="WWF лого"><h4>WWF</h4><p>Хамгааллын үндэслэлийг баталгаажуулна — биологийн олон янз байдал, хог хаягдалгүй үр дүн нь WWF-ийн шалгуурт нийцнэ.</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image25.png" alt="GEF-7 лого"><h4>GEF-7</h4><p>Эдийн засгийн үндэслэлийг баталгаажуулна.</p></div>
+      </div>
+      <p class="footnote">GEF-7-с санхүүжсэн "Монголын зүүн хээрийн хуурай бүсийн тогтвортой ландшафт ба биологийн олон янз байдлыг хамгаалах" төслөөр дамжуулан UN FAO, WWF байгууллагуудын дэмжлэг газар дээр үнэ цэнэтэй хувь нэмэр оруулж байна.</p>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Загварын нотолгоо</span>
+      <h2 class="title">Энэ бол зөвхөн санаа биш — аль хэдийн хэрэгжиж эхэлсэн</h2>
+      <div class="grid cols-4">
+        <div class="icon-card"><img class="icon" src="assets/image26.svg" alt=""><div class="num" style="font-family:Cambria,Georgia,serif;font-size:1.6rem;color:var(--forest);font-weight:700;">34</div><p>малчин өрх хамтран хөрөнгө оруулсан</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image27.svg" alt=""><div class="num" style="font-family:Cambria,Georgia,serif;font-size:1.6rem;color:var(--forest);font-weight:700;">70%+</div><p>үйлдвэрийн байгууламж + тоног төхөөрөмж суурилуулагдсан</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image28.svg" alt=""><div class="num" style="font-family:Cambria,Georgia,serif;font-size:1.15rem;color:var(--forest);font-weight:700;">Улсын аварга</div><p>2025 оны үржлийн шагнал — хонь үржүүлэг</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image29.svg" alt=""><div class="num" style="font-family:Cambria,Georgia,serif;font-size:1.3rem;color:var(--forest);font-weight:700;">GEF/WWF/UN FAO</div><p>Буцалтгүй тусламж/тоног төхөөрөмж хүргэгдсэн</p></div>
+      </div>
+      <div class="grid cols-2" style="margin-top:1.6rem;">
+        <div><div class="photo"><img src="assets/image30.JPG" alt="2025 оны улсын аварга үржлийн медаль"></div><div class="photo-cap">Улсын аварга үржлийн шагнал — 2025</div></div>
+        <div><div class="photo"><img src="assets/image31.JPG" alt="Хонины үржлийн үзэсгэлэн, Сүхбаатар"></div><div class="photo-cap">Хонины үзэсгэлэн — Сүхбаатар</div></div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Өсөлт хэрхэн үүсгэн байгуулагчдыг хамгаалдаг вэ</span>
+      <h2 class="title">Гишүүнчлэл ба өмчийн загвар</h2>
+      <p class="lede">273 өрхийн ихэнхэд, эцэст нь Сүхбаатар сумын бусад 4 багийн өрхүүдэд өргөжих нь өвчнийг хяналттай байлгах, хамтын бэлчээр ба усны менежмент хийх, гурван боловсруулах шугамыг тасралтгүй ажиллуулахад шаардлагатай хэмжээнд хүрэх зам юм.</p>
+      <div class="grid cols-3">
+        <div class="icon-card"><img class="icon" src="assets/image32.svg" alt=""><h4>Үүсгэн байгуулагчийн хөрөнгийг тогтоосон, сааруулаагүй</h4><p>40 үүсгэн байгуулагч гишүүний үйлдвэрийн хөрөнгө оруулалтыг хоршоо 2029 он гэхэд албан ёсоор тогтооно — тэдний эрт үеийн эрсдэл хамгаалагдана, гишүүнчлэл өсөхөд сааруулагдахгүй.</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image33.svg" alt=""><h4>Шинэ гишүүд хоршооны дүрмийн дагуу хувь нэмэр оруулна</h4><p>Шинэ өрхүүд 3,000,000 төгрөгийн хувь хөрөнгө оруулна — үүсгэн байгуулагчидтай адил, гэхдээ өөр хэлбэрээр.</p></div>
+        <div class="icon-card"><img class="icon" src="assets/image34.svg" alt=""><h4>Үр өгөөж нь оролцоогоор олгогдоно</h4><p>500 хонитой боловч зөвхөн 10 хонио оролцуулсан өрх нь 50-ыг оролцуулсан өрхөөс бага орлого олно — нийлүүлэлтийн хэмжээ, үржил, ээлжит бэлчээрлэлт, малын эрүүл мэндээр жигнэгдэнэ. Оролцоогүй бол хувь байхгүй.</p></div>
+      </div>
+      <div class="stat-row" style="margin-top:1.6rem;">
+        <div class="stat-card"><div class="num">273</div><div class="lbl">малчин өрх Баянгол багт</div></div>
+        <div class="stat-card"><div class="num">763</div><div class="lbl">хүн эдгээр өрхөд</div></div>
+        <div class="stat-card"><div class="num">40</div><div class="lbl">өрх одоо хоршооны гишүүн</div></div>
+        <div class="stat-card"><div class="num">34+6</div><div class="lbl">малчин + үүсгэн байгуулагч хувь нэмэр оруулагч</div></div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Өмчлөлийн нотолгоо</span>
+      <h2 class="title">34 өрх шууд өмчлөлийг сонгосон — цаасан дээрх гишүүнчлэл биш</h2>
+      <p class="lede">Бодит хөрөнгө оруулалт, чөлөөтэй зориулсан цаг хугацаа — өрх бүрийн айлчлалаас эхлээд байгууламж дээрх хоршооны хэмжээний цуглаан хүртэл.</p>
+      <div class="grid cols-2">
+        <div class="photo"><img src="assets/image35.jpg" alt="Хоршооны хэмжээний уулзалт"></div>
+        <div class="photo"><img src="assets/image36.jpg" alt="Хоршооны хэмжээний уулзалт"></div>
+      </div>
+      <div class="photo-cap">Хоршооны хэмжээний уулзалтууд — хамтын шийдвэр</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="scope">
+  <div class="container">
+    <span class="eyebrow2">Төслийн хамрах хүрээ</span>
+    <h2 class="title">Тавлаг Баянгол төсөл</h2>
+    <p class="lede">1-р багийн бүрэн мөчлөгт экосистем ба эдийн засгийн тэсвэртэй чадавх — Монгол улс, Сүхбаатар аймаг, Сүхбаатар сум — хэрэгжих талбай 2,240 км².</p>
+    <div class="photo" style="max-width:820px;margin-top:1.2rem;"><img src="assets/image37.png" alt="Төслийн хамрах хүрээний зураг"></div>
+
+    <div class="grid cols-8" style="margin-top:2rem;">
+      <div class="pillar-card"><span class="pnum">1</span><img class="icon" src="assets/image38.png" alt=""><h4>Бэлчээрийн менежментийн систем</h4><p style="font-size:.82rem;color:#5b6b64;">Бэлчээрийн ургамал, гол зүйлүүд (шаваг өвс, шаргал бударгана)-ыг хамгаалсан хариуцлагатай ээлжит бэлчээрлэлт.</p></div>
+      <div class="pillar-card"><span class="pnum">2</span><img class="icon" src="assets/image39.png" alt=""><h4>Усны нөөцийн менежмент</h4><p style="font-size:.82rem;color:#5b6b64;">Гол, нуурыг хамгаалах, гадаргын ус хуримтлуулах байгууламж (SWHS), гүний худгийн байршил.</p></div>
+      <div class="pillar-card"><span class="pnum">3</span><img class="icon" src="assets/image40.png" alt=""><h4>Өндөр үнэ цэнэтэй үржил</h4><p style="font-size:.82rem;color:#5b6b64;">Мал тус бүрийн бүтээмжийг нэмэгдүүлэх генетикийн сайжруулалт — мах, ноолуур, ноос.</p></div>
+      <div class="pillar-card"><span class="pnum">4</span><img class="icon" src="assets/image41.png" alt=""><h4>Мал эмнэлгийн эрүүл мэндийн буфер</h4><p style="font-size:.82rem;color:#5b6b64;">Өвчин бууруулах, эрүүл бүсийн гэрчилгээ, төлөвлөгөөт вакцинжуулалт.</p></div>
+      <div class="pillar-card"><span class="pnum">5</span><img class="icon" src="assets/image42.png" alt=""><h4>Органик баяжуулалт (MMO)</h4><p style="font-size:.82rem;color:#5b6b64;">Бэлчээрийн дарамтыг бууруулж, дархлаа болон бүтээгдэхүүний чанарыг сайжруулна.</p></div>
+      <div class="pillar-card"><span class="pnum">6</span><img class="icon" src="assets/image43.png" alt=""><h4>Хог хаягдалгүй үйлдвэрийн цогцолбор</h4><p style="font-size:.82rem;color:#5b6b64;">Мах, сүү, ноолуур, ноосыг нэмүү өртөгтэйгээр, хог хаягдалгүй боловсруулна.</p></div>
+      <div class="pillar-card"><span class="pnum">7</span><img class="icon" src="assets/image44.png" alt=""><h4>Эмэгтэйчүүдийг чадавхжуулах, чадавх бэхжүүлэх</h4><p style="font-size:.82rem;color:#5b6b64;">Малчин эмэгтэйчүүдэд зориулсан тусгай сургалт, тоног төхөөрөмж, жижиг байгууламж — амьд малын худалдаанаас гадна бие даасан, жилийн турш орлого олох боломж.</p></div>
+      <div class="pillar-card"><span class="pnum">8</span><img class="icon" src="assets/image45.png" alt=""><h4>Технологийн платформ (Шимт Сүрэг)</h4><p style="font-size:.82rem;color:#5b6b64;">Эхнээс эцэс хүртэл гарал үүсэл мөшгих, малын паспорт, тооллогын хялбар систем.</p></div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Загвар</span>
+      <h2 class="title">Нэг систем, найман тулгуур багана</h2>
+      <p class="lede">Найман тусдаа төсөл биш — бүгд нэг үр дүнд чиглэсэн. Цөөн мал, эрүүл газар, мал тус бүрээс бүрдүүлэх илүү их үнэ цэнэ.</p>
+      <div class="grid cols-8">
+        <div class="pillar-card"><span class="pnum">1</span><span class="fund-tag grant">Буцалтгүй</span><h4 style="margin-top:1.2rem;">Бэлчээр · Талбай</h4><div class="budget">$50,000</div></div>
+        <div class="pillar-card"><span class="pnum">2</span><span class="fund-tag grant">Буцалтгүй</span><img class="icon" src="assets/image46.png" alt=""><h4>Ус · Нөөц</h4><div class="budget">$50,000</div></div>
+        <div class="pillar-card"><span class="pnum">3</span><span class="fund-tag grant">Буцалтгүй</span><img class="icon" src="assets/image47.png" alt=""><h4>Өндөр үнэ цэнэ · Үржил</h4><div class="budget">$72,000</div></div>
+        <div class="pillar-card"><span class="pnum">4</span><span class="fund-tag grant">Буцалтгүй</span><img class="icon" src="assets/image48.png" alt=""><h4>Мал эмнэлэг · Эрүүл мэнд</h4><div class="budget">$30,000</div></div>
+        <div class="pillar-card"><span class="pnum">5</span><span class="fund-tag grant">Буцалтгүй</span><img class="icon" src="assets/image49.png" alt=""><h4>Органик · Тэжээл</h4><div class="budget">$93,000</div></div>
+        <div class="pillar-card"><span class="pnum">6</span><span class="fund-tag loan">Ногоон зээл</span><img class="icon" src="assets/image50.png" alt=""><h4>Хог хаягдалгүй · Үйлдвэр</h4><div class="budget">$789,000</div></div>
+        <div class="pillar-card"><span class="pnum">7</span><span class="fund-tag loan">Ногоон зээл</span><img class="icon" src="assets/image51.png" alt=""><h4>Гарал үүсэл мөшгих (Шимт Сүрэг)</h4><div class="budget">$162,000</div></div>
+        <div class="pillar-card"><span class="pnum">8</span><span class="fund-tag grant">Буцалтгүй</span><img class="icon" src="assets/image52.png" alt=""><h4>Эмэгтэйчүүдийг чадавхжуулах</h4><div class="budget">$50,000</div></div>
+      </div>
+      <div class="callout amber" style="margin-top:1.6rem;text-align:center;font-size:1.05rem;">НИЙТ ШААРДЛАГАТАЙ ХӨРӨНГӨ ОРУУЛАЛТ — <span class="highlight-num" style="font-size:1.3rem;">$1,296,000</span><br><span style="font-size:.82rem;font-weight:400;color:#5b6b64;">Буцалтгүй тусламж (1–5, 8-р баганууд): $345,000 · Ногоон зээл (6–7-р баганууд): $951,000 — үүнээс $320,000 эргэлтийн хөрөнгө (45 хоног) + $469,000 үйлдвэрийг бүрэн ашиглалтад оруулах</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="practice">
+  <div class="container">
+    <span class="eyebrow2">1-р тулгуур баганын хэрэгжилт — Бэлчээрийн хяналт-шинжилгээ</span>
+    <h2 class="title">12 цэг, улирал бүр, маршрутыг оновчилсон</h2>
+    <p class="lede">Улсын хөтөлбөрт заасан цэгүүд дээр нэмээд илүү олон цэгт хяналт хийх шаардлагатай. Улирал бүр: өвсний нягтрал, өндөр, ургамлын тооллого хэмжигдэж, лабораторийн шим тэжээлийн шинжилгээнд дээж авна.</p>
+    <div class="stat-row">
+      <div class="stat-card"><div class="num">+12</div><div class="lbl">хяналтын цэг</div></div>
+      <div class="stat-card"><div class="num">жилд 4</div><div class="lbl">удаа — хоршооноос зохион байгуулсан, малчдын удирдсан улирлын хяналт, дээж авалт</div></div>
+    </div>
+    <div class="callout" style="margin-top:1.6rem;">
+      <b>Аргачлал нь NAMEM-ийн улсын стандарттай нийцнэ</b>
+      <ul style="margin:.6rem 0 0 1.1rem;padding:0;">
+        <li>Шугам-цэгийн огтлолцлын арга</li>
+        <li>Завсрын огтлолцлын арга</li>
+        <li>Агаарт хатаасан биомассын хэмжилт</li>
+        <li>Фото цэг (давтан, тогтмол өнцгөөр)</li>
+      </ul>
+    </div>
+
+    <div class="subsection">
+      <h2 class="title" style="font-size:1.4rem;display:flex;align-items:center;gap:.5rem;"><img class="motif-icon" src="assets/image3.png" alt="">12 хяналтын цэгийн байршил ба солбицол</h2>
+      <div class="grid cols-2" style="align-items:start;">
+        <div>
+          <div class="photo"><img src="assets/image55.png" alt="Хяналтын цэгүүдийн зураг"></div>
+          <div class="photo-cap">Урьд хойд аялал ~340 км · ХЦ1 → ХЦ10 → ХЦ12 → ХЦ11 → ХЦ1</div>
+        </div>
+        <div class="table-wrap" style="margin-top:0;">
+          <table>
+            <thead><tr><th>#</th><th>Хяналтын цэг</th><th>Өргөрөг</th><th>Уртраг</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td>Алба (аймгийн төв)</td><td>46.682048° N</td><td>113.277743° E</td></tr>
+              <tr><td>1</td><td>Их шанд</td><td>46.718736° N</td><td>114.184104° E</td></tr>
+              <tr><td>2</td><td>Дунд Хулст</td><td>46.781130° N</td><td>114.282903° E</td></tr>
+              <tr><td>3</td><td>Бурд</td><td>46.780486° N</td><td>114.475513° E</td></tr>
+              <tr><td>4</td><td>Цагаан дэрс</td><td>46.695319° N</td><td>114.512951° E</td></tr>
+              <tr><td>5</td><td>Цагаан төмөөт</td><td>46.748560° N</td><td>114.679164° E</td></tr>
+              <tr><td>6</td><td>Дөрвөлжин худагийн Говь</td><td>46.653221° N</td><td>114.755007° E</td></tr>
+              <tr><td>7</td><td>Хавирга цагаан дэрс</td><td>46.538150° N</td><td>114.821240° E</td></tr>
+              <tr><td>8</td><td>Хадан манхан</td><td>46.494060° N</td><td>114.807471° E</td></tr>
+              <tr><td>9</td><td>Тарангийн хөндий</td><td>46.499120° N</td><td>114.655950° E</td></tr>
+              <tr><td>10</td><td>Үнээт</td><td>46.484960° N</td><td>114.484450° E</td></tr>
+              <tr><td>11</td><td>Цув</td><td>46.443480° N</td><td>114.293440° E</td></tr>
+              <tr><td>12</td><td>Баянгол</td><td>46.632320° N</td><td>114.357010° E</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">1-р тулгуур баганын хэрэгжилт — Элсний нүүдэл</span>
+      <h2 class="title">Идэвхтэй элсний 2 цэг, зураглагдаж төлөвлөгдсөн</h2>
+      <div class="grid cols-2">
+        <div><div class="photo"><img src="assets/image56.png" alt="1-р цэг Шороот"></div><div class="photo-cap">1-р цэг — Шороот (90 га)</div></div>
+        <div><div class="photo"><img src="assets/image57.png" alt="2-р цэг Энгэр Хулст"></div><div class="photo-cap">2-р цэг — Энгэр Хулст (2.22 га)</div></div>
+      </div>
+      <div class="callout" style="margin-top:1.4rem;">
+        <b>4 эгнээт салхин хамгаалалт — хүрээлэн буй ойн зурвас</b>
+        <ul style="margin:.6rem 0 0 1.1rem;padding:0;">
+          <li>1-р эгнээ: Гадна бут — хармаг (Caragana korshinskii)</li>
+          <li>2-р эгнээ: Дунд зэргийн бут — чацаргана</li>
+          <li>3-р эгнээ: Навчит мод — Сибирь хайлаас</li>
+          <li>4-р эгнээ: Хурдан ургадаг мод — улиас</li>
+        </ul>
+        <p style="margin-top:.6rem;">Зай: эгнээ хооронд 1.5м · эгнээн дотор 2.0м.</p>
+      </div>
+      <p class="callout amber">Тарих нийт тоо хэмжээ (үе шаттай): <span class="highlight-num">~5,200</span> хармаг/бут · <span class="highlight-num">~4,300</span> хайлаас/улиас · нийт <span class="highlight-num">~9,500</span> мод бут</p>
+      <div class="grid cols-2" style="margin-top:1.4rem;align-items:center;">
+        <div class="photo"><img src="assets/image58.jpeg" alt="Хээр дундуур гүйж буй зээр"></div>
+        <div class="icon-card" style="box-shadow:none;border:none;background:transparent;padding:0;">
+          <h4>Биологийн олон янз байдал</h4>
+          <p>Ерхэг өвст хээр, зээрийн уугуул нутаг; коридорууд нээлттэй хэвээр.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">2-р тулгуур баганын хэрэгжилт — Усны эх үүсвэрийг хамгаалах</span>
+      <h2 class="title">Усыг хамгаалж, өвчний дамжих замыг тас</h2>
+      <p class="lede">Нэг тулгуур багана, $50 мянган буцалтгүй тусламж · хамгийн эрсдэлтэй хоёр эх үүсвэрт эрүүл экосистем.</p>
+      <div class="grid cols-2" style="align-items:start;">
+        <div class="offer-card">
+          <h4>2-р тулгуур багана — Усны эх үүсвэрийг хамгаалах</h4>
+          <div class="row"><b>Асуудал:</b> ихэнх жижиг гол, нуур ширгэж, хамгаалалт шаардаж байна. Тогтсон, урсдаггүй ус нь сүргүүдийн хооронд өвчин дамжих гол цэг болдог.</div>
+          <div class="row"><b>Үйл ажиллагаа:</b> хамгийн их ашиглагддаг, хамгийн эрсдэлтэй 2 эх үүсвэрт хамгаалалтыг төвлөрүүлнэ; гол (Баянгол), нуур (Бухт)-ын нэрийг орон нутагт баталгаажуулна.</div>
+          <div class="cost">$50 мянга <span>буцалтгүй тусламж</span></div>
+        </div>
+        <div class="table-wrap" style="margin-top:0;">
+          <table>
+            <thead><tr><th>#</th><th>Гол, нуурууд</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Тугал булаг</td></tr>
+              <tr><td>2</td><td>Наран булаг</td></tr>
+              <tr><td>3</td><td>Хавирга булаг</td></tr>
+              <tr><td>4</td><td>Хажуу булаг</td></tr>
+              <tr><td>5</td><td>Цагаан нуур</td></tr>
+              <tr><td>6</td><td>Буурал хөтөл нуур</td></tr>
+              <tr><td>7</td><td>Баянгол гол</td></tr>
+              <tr><td>8</td><td>Ар булаг</td></tr>
+              <tr><td>9</td><td>Мухар ширээ нуур</td></tr>
+              <tr><td>10</td><td>Энгэр Хулст нуур</td></tr>
+              <tr><td>11</td><td>Хорооллын Их Цагаан нуур</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">3–5-р тулгуур баганын хэрэгжилт — Малын давхарга</span>
+      <h2 class="title">Илүү сайн генетик, эрүүл мал, бэлчээрийн дарамтыг бууруулах тэжээл</h2>
+      <p class="lede">Гурван тулгуур багана, $195 мянган буцалтгүй тусламж · бэлчээрийн сэргэлтийг илүү үнэ цэнэтэй малд хувиргах давхарга.</p>
+      <div class="grid cols-3">
+        <div class="offer-card">
+          <h4>3-р тулгуур багана — Үржил</h4>
+          <div class="row"><b>Асуудал:</b> тоо толгойг чанараас илүү тэргүүлсэн нь генетикийн ахиц дэвшлийг зогсоосон.</div>
+          <div class="row"><b>Үйл ажиллагаа:</b> 50 эм тутамд 1 харьцаатай үрждэг хуц, ухна, үе шаттайгаар нэвтрүүлнэ.</div>
+          <div class="cost">$72 мянга <span>буцалтгүй тусламж</span></div>
+        </div>
+        <div class="offer-card">
+          <h4>4-р тулгуур багана — Мал эмнэлэг</h4>
+          <div class="row"><b>Асуудал:</b> тав хүртэлх өвчний аюул, үүнд шүлхий орно.</div>
+          <div class="row"><b>Үйл ажиллагаа:</b> ГАП сургалт — ариутгал, эмийн усанд оруулах, шимэгчтэх — мөн 2-р тулгуур баганын усны шийдэл.</div>
+          <div class="cost">$30 мянга <span>буцалтгүй тусламж</span></div>
+        </div>
+        <div class="offer-card">
+          <h4>5-р тулгуур багана — Органик тэжээл</h4>
+          <div class="row"><b>Асуудал:</b> ургамлын олон янз байдал алдагдсанаас өвлийн улиралд мал эрдэс дутагдалд ордог.</div>
+          <div class="row"><b>Үйл ажиллагаа:</b> баталгаажсан сүргийн 10% (6,863 толгой)-д эрдэс, баяжмал нэмэлт тэжээл өгнө.</div>
+          <div class="cost">$93 мянга <span>буцалтгүй тусламж</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2"><img class="motif-icon" src="assets/image59.png" alt="">6-р тулгуур баганын хэрэгжилт — Үйлдвэрийн барилгын явц</span>
+      <h2 class="title">Батлагдсан зураг төсөл, малчдын хөрөнгө оруулалтаар барьж байна</h2>
+      <div class="grid cols-3">
+        <div class="icon-card">
+          <h4>Функциональ талбайнууд (650 м²)</h4>
+          <ul style="margin:.4rem 0 0 1.1rem;padding:0;font-size:.9rem;color:#3d4d47;">
+            <li>Мал нядлах — 211 м² ✓</li>
+            <li>Дайвар бүтээгдэхүүн боловсруулах — 115 м² ✓</li>
+            <li>Мах хөргөх — 54 м²</li>
+            <li>Хөлдөөсөн бүтээгдэхүүний агуулах</li>
+            <li>Нийтлэг үйлчилгээ, инженерийн шугам сүлжээний талбай</li>
+          </ul>
+          <p style="font-size:.78rem;color:#7c8f88;margin-top:.6rem;">✓ = бүрэн дуусгасан; үлдсэн хэсгүүд 100% суурьтай</p>
+        </div>
+        <div class="icon-card">
+          <h4>Тооцоолсон төсөв</h4>
+          <div class="num" style="font-family:Cambria,Georgia,serif;font-size:1.5rem;color:var(--forest);font-weight:700;">$623 мянга</div>
+          <p>Албан ёсоор батлагдсан инженерийн зураг төсөл; өнөөдрийн байдлаар нийт төслийн хөрөнгө оруулалтын ~30% хийгдсэн.</p>
+        </div>
+        <div class="icon-card">
+          <h4>Бүрэн ачаалалтай үеийн ажиллах хүчин чадал</h4>
+          <p style="margin:0;font-size:.9rem;"><b>Цагт:</b> 20 бог мал / 5 бод мал<br>
+          <b>Өдөрт:</b> 160 / 40<br>
+          <b>Жилд:</b> 29,120 / 7,280</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Онцлох тулгуур багана — Зээлээр санхүүжсэн</span>
+      <h2 class="title">Үйлдвэр: эрүүл мэнд орлого болж хувирдаг газар — системийн хөдөлгүүр</h2>
+      <p class="lede">Эрүүл бэлчээр, сайн үрждэг мал зөвхөн малчид үнэ цэнийг бодитоор бүрдүүлж чадвал л ач холбогдолтой. Үйлдвэр яг үүнийг хийдэг — өмнөх тулгуур баганаас ялгаатай нь энэ бол зөвхөн төлөвлөгөө биш. Хоршооны өөрийн хөрөнгөөр аль хэдийн баригдсан. Хамгаалагдсан бэлчээрийн экосистем, сайн арчлагдсан эрүүл малаас гарсан 100% байгалийн ЭКО ХҮНСНИЙ ҮЙЛДВЭРЛЭЛ. Хог хаягдалгүй мах, ноолуур, ноос, дотор боловсруулалт — нядлах шугамын рельс, мэдэнгүйжүүлэх тоног төхөөрөмж, гол машин механизм аль хэдийн суурилагдсан.</p>
+      <div class="grid cols-2">
+        <div class="photo"><img src="assets/image60.jpg" alt="Тоног төхөөрөмж суурилуулсан үйлдвэрийн талбай"></div>
+        <div class="photo"><img src="assets/image61.jpg" alt="Үйлдвэрийн дотоод орчин"></div>
+      </div>
+      <div class="photo-cap">Сүхбаатар талбай — тоног төхөөрөмж суурилуулсан / ард нь бэлчээртэй дамжуулагч</div>
+    </div>
+  </div>
+</section>
+
+<section class="block dark" id="one-system">
+  <div class="container">
+    <span class="eyebrow2" style="color:var(--amber);">Нэг систем, хоёр тусдаа хүсэлт биш</span>
+    <h2 class="title">Буцалтгүй тусламжийн тулгуур баганууд ба үйлдвэр бие биенээ бэхжүүлдэг</h2>
+    <div class="flow">
+      <div class="flow-step"><img class="icon" src="assets/image62.svg" alt=""><h4>Буцалтгүй тусламжийн баганууд</h4><p>бэлчээрийн экосистем, үржил, мал эмнэлэг, ус, тэжээл</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><img class="icon" src="assets/image63.svg" alt=""><h4>Эрүүл бэлчээр</h4><p>ба сайн үрждэг мал</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><img class="icon" src="assets/image64.svg" alt=""><h4>Үйлдвэр</h4><p>зээлээр санхүүжсэн</p></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><img class="icon" src="assets/image34.svg" alt=""><h4>Малчны орлого</h4><p>ба тогтвортой байдлын нотолгоо</p></div>
+    </div>
+    <p class="lede" style="margin-top:1.4rem;">↰ мөчлөг үргэлжилсээр байна: малчны орлого бэлчээрийн дарамтыг бууруулах эрх ашгийг бэхжүүлж, энэ нь буцаагаад буцалтгүй тусламжийн баганаар хамгаалагдсан бэлчээрийг бэхжүүлнэ.</p>
+    <p class="lede">Энэ бол хоёр тусдаа хүсэлтийг нэгтгэсэн зүйл биш — зээлээр санхүүжсэн хэсэг, буцалтгүй тусламжаар санхүүжсэн хэсэг харилцан бие биенээ ажиллуулдаг нэг систем юм.</p>
+  </div>
+</section>
+
+<section class="block" id="economics">
+  <div class="container">
+    <span class="eyebrow2">Төслийн хамрах хүрээ</span>
+    <h2 class="title">Төслийн хамрах хүрээ ба өгөгдөл</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Үзүүлэлт</th><th>Утга</th></tr></thead>
+        <tbody>
+          <tr><td>Төслийн талбай</td><td>2,240 км² (224,000 га)</td></tr>
+          <tr><td>Багийн өрх / хүн ам</td><td>273 өрх · 763 хүн</td></tr>
+          <tr><td>Одоогийн хоршооны гишүүд</td><td>40 (34 малчин + 6 малчин бус)</td></tr>
+          <tr><td>Хугацаа</td><td>3 жил (1-р үе шат)</td></tr>
+          <tr><td>Хүсэж буй санхүүжилт</td><td>$1.29 сая</td></tr>
+          <tr><td>Бэлчээрийн ачаалал → 3 дахь жилийн зорилт</td><td>169,186 → 135,000 ХТМ</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">
+      <span class="eyebrow2">Эдийн засгийн үндэслэл</span>
+      <h2 class="title">1-р үе шатны батлагдсан малчны үнэ цэнэ</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Эх үүсвэр</th><th>Суурь түвшин (₮)</th><th>Төсөлтэй</th><th>Өсөлт</th></tr></thead>
+          <tbody>
+            <tr><td>Мах</td><td>7.02 тэрбум</td><td>11.25 тэрбум</td><td>+4.23 тэрбум</td></tr>
+            <tr><td>Ноолуур</td><td>3.80 тэрбум</td><td>4.07 тэрбум</td><td>+0.27 тэрбум</td></tr>
+            <tr><td>Ноос</td><td>0</td><td>0.32 тэрбум</td><td>+0.32 тэрбум</td></tr>
+            <tr><td>Арьс шир</td><td>0</td><td>0.66 тэрбум</td><td>+0.66 тэрбум</td></tr>
+            <tr><td>Дотор, дайвар бүтээгдэхүүн</td><td>0</td><td>0.44 тэрбум</td><td>+0.44 тэрбум</td></tr>
+            <tr class="excluded"><td>Сүү (ирээдүйн үе шат)</td><td>1.71 тэрбум</td><td>4.44 тэрбум</td><td>+2.73 тэрбум*</td></tr>
+            <tr class="total"><td>НИЙТ</td><td>12.53 тэрбум</td><td>21.17 тэрбум</td><td>+5.91 тэрбум</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footnote">*Сүү нийт дүнд орохгүй (ирээдүйн үе шат).</p>
+
+      <div class="cmp-bars">
+        <div class="cmp-row"><div class="cmp-label">Мах <em>7.02Т → 11.25Т</em></div><div class="cmp-track"><div class="cmp-fill baseline" style="width:62.4%"></div><div class="cmp-fill withproj" style="width:100%;opacity:.35"></div><div class="cmp-fill withproj" style="width:62.4%"></div></div></div>
+        <div class="cmp-row"><div class="cmp-label">Ноолуур <em>3.80Т → 4.07Т</em></div><div class="cmp-track"><div class="cmp-fill withproj" style="width:36.2%"></div><div class="cmp-fill baseline" style="width:33.8%"></div></div></div>
+        <div class="cmp-row"><div class="cmp-label">Ноос <em>0 → 0.32Т</em></div><div class="cmp-track"><div class="cmp-fill withproj" style="width:2.8%"></div></div></div>
+        <div class="cmp-row"><div class="cmp-label">Арьс шир <em>0 → 0.66Т</em></div><div class="cmp-track"><div class="cmp-fill withproj" style="width:5.9%"></div></div></div>
+        <div class="cmp-row"><div class="cmp-label">Дотор, дайвар <em>0 → 0.44Т</em></div><div class="cmp-track"><div class="cmp-fill withproj" style="width:3.9%"></div></div></div>
+        <div class="cmp-row"><div class="cmp-label">Сүү* <em>1.71Т → 4.44Т</em></div><div class="cmp-track"><div class="cmp-fill withproj" style="width:39.5%"></div><div class="cmp-fill baseline" style="width:15.2%"></div></div></div>
+      </div>
+      <p class="footnote" style="margin-top:.4rem;">Т = тэрбум ₮</p>
+      <div class="cmp-legend"><span><i style="background:var(--sage);"></i>Суурь түвшин</span><span><i style="background:var(--amber);"></i>Төсөлтэй</span></div>
+
+      <div class="flow value-chain" style="margin-top:2rem;">
+        <div class="flow-step"><h4 style="color:var(--forest);font-size:1.15rem;">$1.64 сая/жил</h4><p>Нэмэлт үнэ цэнэ (сүү оруулаагүй)</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><h4 style="color:var(--forest);font-size:1.15rem;">$6 мянга/өрх</h4><p>273 Баянгол багийн өрхөд тэнцүү хуваарилснаар</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><h4 style="color:var(--forest);font-size:1.15rem;">~14,774 ХТМ</h4><p>жилийн үнэ цэнийн эквивалент</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><h4 style="color:var(--forest);font-size:1.15rem;">~29,549 ХТМ</h4><p>үнэ цэнийн эквивалент, 2 жил ≈ манай 34,186 ХТМ бууруулах зорилтын 86%</p></div>
+      </div>
+      <p class="footnote">ХТМ-эквивалент гэдэг нь сүргээс бодитоор хасагдсан малын тоо биш, харин үнэ цэнийг хонин толгойн нэгжээр илэрхийлсэн үзүүлэлт юм.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block dark" id="impact">
+  <div class="container">
+    <span class="eyebrow2" style="color:var(--amber);">ESG үр нөлөөг бий болгох нь</span>
+    <h2 class="title">Монголоос гарсан уур амьсгалын шийдэл</h2>
+    <div class="grid cols-3">
+      <div class="stat-card"><img class="icon" src="assets/image65.svg" alt="" style="width:36px;height:36px;margin-bottom:.5rem;"><div class="num">≈ 763 тонн</div><div class="lbl">жилд бууруулсан органик хог хаягдал</div></div>
+      <div class="stat-card"><img class="icon" src="assets/image66.svg" alt="" style="width:36px;height:36px;margin-bottom:.5rem;"><div class="num">≈ 47,200 тонн*</div><div class="lbl">жилд бууруулсан CO₂e — үүний +90% нь хөрсний нүүрстөрөгч шингээлтээс</div></div>
+      <div class="stat-card"><img class="icon" src="assets/image67.svg" alt="" style="width:36px;height:36px;margin-bottom:.5rem;"><div class="num">0.2%</div><div class="lbl">Монголын 2035 оны ХХС төлөвлөгөөнд оруулах хувь нэмэр</div></div>
+    </div>
+    <p class="footnote">*Тооцоолол; аргачлал хараат бус хянан магадлалд байна.</p>
+
+    <div class="subsection">
+      <span class="eyebrow2" style="color:var(--amber);">Үр нөлөөний хураангуй</span>
+      <h2 class="title">Амжилт ямар байх вэ</h2>
+      <div class="grid cols-3 compact-3">
+        <div class="stat-card"><img class="icon" src="assets/image32.svg" alt="" style="width:26px;height:26px;margin-bottom:.35rem;"><div class="num">273 өрх</div><div class="lbl">багийн бүрэн хамралтад хүрсэн</div></div>
+        <div class="stat-card"><img class="icon" src="assets/image69.svg" alt="" style="width:26px;height:26px;margin-bottom:.35rem;"><div class="num">169,186 → 135,000 ХТМ</div><div class="lbl">3 дахь жилд бэлчээрийн дарамт буурсан</div></div>
+        <div class="stat-card"><img class="icon" src="assets/image34.svg" alt="" style="width:26px;height:26px;margin-bottom:.35rem;"><div class="num">~$1.64 сая/жил</div><div class="lbl">гишүүн өрхүүдэд батлагдсан үнэ цэнэ</div></div>
+        <div class="stat-card"><img class="icon" src="assets/image65.svg" alt="" style="width:26px;height:26px;margin-bottom:.35rem;"><div class="num">763 тонн</div><div class="lbl">дайвар хог хаягдал жил бүр боловсруулагдсан</div></div>
+        <div class="stat-card"><img class="icon" src="assets/image66.svg" alt="" style="width:26px;height:26px;margin-bottom:.35rem;"><div class="num">47,200 тонн</div><div class="lbl">жил бүр саармагжуулсан CO₂e</div></div>
+        <div class="stat-card"><img class="icon" src="assets/image70.svg" alt="" style="width:26px;height:26px;margin-bottom:.35rem;"><div class="num">Тусгай чиглэл</div><div class="lbl">малчин эмэгтэйчүүдийн орлогод зориулсан</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block dark" id="roadmap">
+  <div class="container">
+    <span class="eyebrow2" style="color:var(--amber);">Хэрэгжүүлэх төлөвлөгөө</span>
+    <h2 class="title">Гурван жилийн үе шат</h2>
+    <div class="roadmap">
+      <div class="roadmap-card">
+        <div class="yr">1 дэх жил</div><h4>Нотолгооны үе шат</h4>
+        <p>650 м² хог хаягдалгүй үйлдвэрийг ашиглалтад оруулж, эхлүүлнэ — $789 мянган ногоон зээл.</p>
+        <p>Бэлчээрийн мониторинг, малын чанарын үнэлгээ, элсний талбайд мод тарих, ГАП сургалт эхэлнэ — $50 мянга.</p>
+      </div>
+      <div class="roadmap-card">
+        <div class="yr">1–2 дахь жил</div><h4>Системийг бүрдүүлэх</h4>
+        <p>Хамгийн эрсдэлтэй 2 усны эх үүсвэрийг хамгаална ($50 мянга); харьцаанд суурилсан үрждэг малын тоог нэмэгдүүлнэ ($72 мянга).</p>
+        <p>273 өрхөд мал эмнэлэг/ГАП ($30 мянга), органик эрдэс тэжээл ($93 мянга) хүргэнэ.</p>
+      </div>
+      <div class="roadmap-card">
+        <div class="yr">2–3 дахь жил</div><h4>Гарал үүсэл мөшгих ба баталгаажуулалт</h4>
+        <p>Шимт Сүрэг гарал үүсэл мөшгих системийг бүрэн нэвтрүүлнэ — $162 мянган ногоон зээл.</p>
+        <p>Эмэгтэйчүүдийн орлогын чиглэлийг албажуулна ($50 мянган буцалтгүй тусламж); хөтөлбөрийн нийт дүн $1.30 сая.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="investment">
+  <div class="container">
+    <span class="eyebrow2"><img class="motif-icon" src="assets/image68.png" alt="">Хөрөнгө оруулалт</span>
+    <h2 class="title">Шаардагдах санхүүжилт ба бүтэц</h2>
+    <p class="lede">Холимог: буцалтгүй тусламж (эрүүл мэндийн баганууд) + ногоон зээл (үйлдвэр ба гарал үүсэл мөшгих).</p>
+
+    <div class="donut-wrap">
+      <div class="donut"><div class="donut-center"><div class="num">$1,296,000</div><div class="lbl">Нийт хүсэлт</div></div></div>
+      <div class="donut-legend">
+        <span><i style="background:var(--amber);"></i>Ногоон зээл — $951,000 · 73%</span>
+        <span><i style="background:var(--teal2);"></i>Буцалтгүй тусламж — $345,000 · 27%</span>
+      </div>
+    </div>
+
+    <div class="grid cols-2" style="margin-top:2rem;">
+      <div class="icon-card">
+        <h4>Ногоон зээл · $951,000</h4>
+        <p style="margin-bottom:1rem;">Ногоон зээл (жишээ нь ХасБанк) эсвэл холимог санхүүжилт (жишээ нь GCF-холимог сан)-аар.</p>
+        <div class="bar-breakdown">
+          <div class="brow"><div class="blabel">Үйлдвэрийн эргэлтийн хөрөнгө</div><div class="btrack"><div class="bfill loan" style="width:33.7%"></div></div><div class="bval">$320,000</div></div>
+          <div class="brow"><div class="blabel">Үйлдвэрийг дуусгах</div><div class="btrack"><div class="bfill loan" style="width:49.3%"></div></div><div class="bval">$469,000</div></div>
+          <div class="brow"><div class="blabel">Гарал үүсэл мөшгих</div><div class="btrack"><div class="bfill loan" style="width:17.0%"></div></div><div class="bval">$162,000</div></div>
+        </div>
+      </div>
+      <div class="icon-card">
+        <h4>Буцалтгүй тусламж · $345,000</h4>
+        <p style="margin-bottom:1rem;">Буцалтгүй тусламж (жишээ нь Дасан зохицох сан, GEF/STELARR, IFAD)-аар: бэлчээр, ус, үржил, мал эмнэлэг, тэжээл, эмэгтэйчүүдийг чадавхжуулах.</p>
+        <div class="bar-breakdown">
+          <div class="brow"><div class="blabel">Бэлчээрийн талбай</div><div class="btrack"><div class="bfill grant" style="width:14.5%"></div></div><div class="bval">$50,000</div></div>
+          <div class="brow"><div class="blabel">Усны нөөц</div><div class="btrack"><div class="bfill grant" style="width:14.5%"></div></div><div class="bval">$50,000</div></div>
+          <div class="brow"><div class="blabel">Өндөр үнэ цэнэтэй үржил</div><div class="btrack"><div class="bfill grant" style="width:20.9%"></div></div><div class="bval">$72,000</div></div>
+          <div class="brow"><div class="blabel">Мал эмнэлгийн эрүүл мэнд</div><div class="btrack"><div class="bfill grant" style="width:8.7%"></div></div><div class="bval">$30,000</div></div>
+          <div class="brow"><div class="blabel">Органик тэжээл</div><div class="btrack"><div class="bfill grant" style="width:27.0%"></div></div><div class="bval">$93,000</div></div>
+          <div class="brow"><div class="blabel">Эмэгтэйчүүдийг чадавхжуулах</div><div class="btrack"><div class="bfill grant" style="width:14.5%"></div></div><div class="bval">$50,000</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="gallery">
+  <div class="container">
+    <span class="eyebrow2">Талбай дээрх нотолгоо</span>
+    <h2 class="title">Брэнд ба байгууламжийн зургийн сан</h2>
+    <div class="gallery-group">
+      <h4>Дарьганга Фүүд брэнд — 5 жилийн турш баталгаажсан гарал үүсэлтэй, өндөр чанарын мах</h4>
+      <div class="gallery-grid">
+        <div class="photo"><img src="assets/image73.png" alt="Дарьганга Фүүд брэнд"></div>
+      </div>
+    </div>
+    <div class="gallery-group">
+      <h4>Худалдаанд бэлэн баглаа боодол — MNS/GMP стандартын шошготой</h4>
+      <div class="gallery-grid">
+        <div class="photo"><img src="assets/image74.png" alt="Худалдаанд бэлэн баглаа боодол"></div>
+        <div class="photo"><img src="assets/image75.png" alt="Худалдаанд бэлэн баглаа боодол"></div>
+      </div>
+    </div>
+    <div class="gallery-group">
+      <h4>Улаанбаатарын баг — бүрэн эрүүл ахуйн дэглэм, баталгаажсан хүйтэн гинжин хэлхээ</h4>
+      <div class="gallery-grid">
+        <div class="photo"><img src="assets/image76.png" alt="Улаанбаатарын багийн эрүүл ахуйн дэглэм"></div>
+        <div class="photo"><img src="assets/image77.png" alt="Улаанбаатарын багийн эрүүл ахуйн дэглэм"></div>
+        <div class="photo"><img src="assets/image78.png" alt="Улаанбаатарын багийн эрүүл ахуйн дэглэм"></div>
+      </div>
+    </div>
+    <div class="gallery-group">
+      <h4>Ашиглалтад орсон Сүхбаатарын байгууламж дахь хоршооны гишүүд ба гэр бүлүүд</h4>
+      <div class="gallery-grid">
+        <div class="photo"><img src="assets/image79.png" alt="Байгууламж дахь хоршооны гишүүд"></div>
+        <div class="photo"><img src="assets/image80.png" alt="Байгууламж дахь хоршооны гишүүд"></div>
+      </div>
+    </div>
+    <div class="gallery-group">
+      <h4>Суурилуулсан рельсэн систем ба гол боловсруулах машин механизм, Сүхбаатар талбай</h4>
+      <div class="gallery-grid">
+        <div class="photo"><img src="assets/image81.png" alt="Суурилуулсан рельсэн систем"></div>
+        <div class="photo"><img src="assets/image82.png" alt="Суурилуулсан рельсэн систем"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <h2><img class="motif-icon" src="assets/image72.png" alt="" style="filter:brightness(0) invert(1);">Тавлаг уу?</h2>
+    <p style="color:var(--palesage)">Бүх юм сайн уу? Бидний хариулт бол зөвхөн мэндчилгээ биш, үйл ажиллагаа юм.</p>
+    <p style="max-width:620px;margin:0 auto;color:var(--palesage)">Монголын газар, мал, хүн — төлөвлөгөөт байдлаар хамтдаа хөгжиж чадна гэдгийг батлахын тулд бид түншлэл, хөрөнгө оруулалтад урьж байна.</p>
+    <div class="contact">tenuundarkhankhaan@gmail.com · +976-9000-5051</div>
+    <div class="logos">
+      <img class="contact-photo" src="assets/image71.jpeg" alt="Холбоо барих / багийн зураг">
+      <img src="assets/image5.png" alt="Дарьганга Фүүд компанийн лого">
+    </div>
+    <div class="fine">Тавлаг Баянгол · КОП-17 · Монгол улс, Сүхбаатар аймаг</div>
+  </div>
+</footer>
+
+</body>
+</html>
